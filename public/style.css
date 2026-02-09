@@ -92,54 +92,76 @@ body {
 /* ================= TRUST MOVING CARDS ================= */
 
 /* ================= FULL WIDTH TRUST MOVING CARDS ================= */
-/* ================= TRUST MOVING CARDS – GAPLESS ================= */
-
-/* ================= TRUE FULL-WIDTH MARQUEE ================= */
-
 .trust-section {
-  background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
-  padding: 100px 0;
+  padding: 80px 0;
+  background: #fff;
   overflow: hidden;
 }
 
-/* Full screen width breakout */
-.trust-marquee {
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  width: 100vw;
-  overflow: hidden;
-  margin-top: 50px;
+.trust-heading {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 50px;
 }
 
-/* Moving row */
-.trust-track {
+/* MARQUEE */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee-track {
   display: flex;
-  gap: 20px;
   width: max-content;
-  animation: scrollTrust 30s linear infinite;
+  animation: scroll 35s linear infinite;
 }
 
-/* Cards */
+/* CARD */
 .trust-card {
+  width: 300px;
+  min-height: 260px;
+  margin-right: 24px;
+  padding: 30px;
+  border-radius: 22px;
   flex-shrink: 0;
-  min-width: 280px;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 20px 26px;
-  border-radius: 14px;
-  font-size: 18px;
-  font-weight: 600;
-  color: #0f172a;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-  white-space: nowrap;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.08);
 }
 
-/* Infinite scroll */
-@keyframes scrollTrust {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+.trust-card .card-icon {
+  margin-top: 24px;       /* space above icon */
+  align-self: center;     /* center horizontally */
+  width: 64px;
+  height: 64px;
+  opacity: 0.85;
+}
+
+.trust-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.trust-card p {
+  color: #334155;
+  font-size: 16px;
+}
+
+/* COLORS */
+.soft-blue { background: #e6f4f1; }
+.soft-green { background: #eef7e9; }
+.soft-yellow { background: #fff6e5; }
+.soft-purple { background: #f2edff; }
+.soft-peach { background: #e4d8de; }
+
+/* ANIMATION */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .intro-section {

@@ -59,39 +59,74 @@ export default function Home() {
 
       {/* ================= TRUST & FEATURES SECTION ================= */}
       <section className="trust-section">
+        <h2 className="trust-heading">Trusted IT Staff Augmentation Partner</h2>
 
-        {/* Centered content */}
-        <div className="trust-container">
-          <h2>Trusted IT Staff Augmentation Partner</h2>
+        <div className="marquee">
+          <div className="marquee-track">
 
-          <p>
-            Hiring full-time talent takes time. Projects can’t wait.
-            <br />
-            <strong>AdlerTech Connect</strong> provides end-to-end IT staff augmentation
-            services that allow businesses to scale engineering teams quickly
-            without long hiring cycles—whether you need a single expert or an
-            entire dedicated team.
-          </p>
-        </div>
+            {/* SET 1 */}
+            <div className="trust-card soft-blue">
+              <h3>Fast Onboarding</h3>
+              <p>Deploy developers in 7–14 days.</p>
+              <img src="/icons/fast.svg" alt="" />
+            </div>
 
-        {/* FULL WIDTH – OUTSIDE CONTAINER */}
-        <div className="trust-marquee">
-          <div className="trust-track">
-            <div className="trust-card">⚡ Fast onboarding (7–14 days)</div>
-            <div className="trust-card">🔄 Flexible engagement models</div>
-            <div className="trust-card">🌍 India-based & global delivery</div>
-            <div className="trust-card">💰 Transparent pricing</div>
-            <div className="trust-card">🤝 Dedicated account support</div>
+            <div className="trust-card soft-green">
+              <h3>Flexible Models</h3>
+              <p>Full-time, contract, or part-time.</p>
+              <img src="/icons/flex.svg" alt="" />
+            </div>
 
-            {/* duplicate */}
-            <div className="trust-card">⚡ Fast onboarding (7–14 days)</div>
-            <div className="trust-card">🔄 Flexible engagement models</div>
-            <div className="trust-card">🌍 India-based & global delivery</div>
-            <div className="trust-card">💰 Transparent pricing</div>
-            <div className="trust-card">🤝 Dedicated account support</div>
+            <div className="trust-card soft-yellow">
+              <h3>Global Talent</h3>
+              <p>India & worldwide teams.</p>
+              <img src="/icons/global.svg" alt="" />
+            </div>
+
+            <div className="trust-card soft-purple">
+              <h3>Transparent Pricing</h3>
+              <p>No hidden fees.</p>
+              <img src="/icons/pricing.svg" alt="" />
+            </div>
+
+            <div className="trust-card soft-peach">
+              <h3>Dedicated Account Support</h3>
+              <p>Personalized support with a dedicated account manager.</p>
+              <img src="/icons/support.svg" alt="" />
+            </div>
+
+            {/* SET 2 (duplicate – REQUIRED for seamless loop) */}
+            <div className="trust-card soft-blue">
+              <h3>Fast Onboarding</h3>
+              <p>Deploy developers in 7–14 days.</p>
+              <img src="/icons/fast.svg" alt="" />
+            </div>
+
+            <div className="trust-card soft-green">
+              <h3>Flexible Models</h3>
+              <p>Full-time, contract, or part-time.</p>
+              <img src="/icons/flex.svg" alt="" />
+            </div>
+
+            <div className="trust-card soft-yellow">
+              <h3>Global Talent</h3>
+              <p>India & worldwide teams.</p>
+              <img src="/icons/global.svg" alt="" />
+            </div>
+
+            <div className="trust-card soft-purple">
+              <h3>Transparent Pricing</h3>
+              <p>No hidden fees.</p>
+              <img src="/icons/pricing.svg" alt="" />
+            </div>
+
+            <div className="trust-card soft-peach">
+              <h3>Dedicated Account Support</h3>
+              <p>Personalized support with a dedicated account manager.</p>
+              <img src="/icons/support.svg" alt="" />
+            </div>
           </div>
         </div>
-
       </section>
 
       {/* ================= WHY CHOOSE US SECTION ================= */}
