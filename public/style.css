@@ -277,18 +277,6 @@ section p {
   color: black;
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .footer-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .footer {
-    padding: 60px 24px 30px;
-  }
-}
-
 .hero {
   position: relative;
   width: 100%;
@@ -467,14 +455,6 @@ section p {
   margin: 0;
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .why-choose-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-}
-
 /* ================= CTA ================= */
 .cta-section .btn-primary {
   font-size: 18px;
@@ -538,21 +518,89 @@ section p {
 }
 
 /* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .container { padding: 0 40px; }
+  .header { padding: 0 40px; height: 90px; }
+  .why-choose-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 18px;
-  }
-  .hero-content h2 {
-    font-size: 18px;
-  }
-  .hero-content h3 {
-    font-size: 18px;
-  }
-  .hero-content p {
-    font-size: 18px;
-  }
+  .container { padding: 0 20px; }
+
   .header {
     height: 80px;
     padding: 0 24px;
+  }
+
+  .btn-primary {
+    width: 100%;
+    max-width: 320px;          /* prevents too-wide buttons */
+    padding: 14px 20px;       /* better tap area */
+    font-size: 16px;          /* readable on small screens */
+    border-radius: 8px;       /* softer mobile look */
+    text-align: center;
+  }
+
+  .hero-buttons {
+    flex-direction: column;   /* stack buttons */
+    align-items: center;
+    gap: 14px;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    max-width: 320px;         /* nice mobile width */
+    text-align: center;
+    padding: 14px 20px;       /* better tap area */
+    font-size: 16px;
+    border-radius: 8px;
+  }
+
+  .btn-outline {
+    border-width: 2px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    height: 90vh;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-content h2 {
+    font-size: 18px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+  }
+
+  .trust-card {
+    width: 260px;
+    min-height: 240px;
+  }
+
+  .why-choose-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer {
+    padding: 60px 24px 30px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 }
