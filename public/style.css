@@ -65,7 +65,7 @@ body {
   color: #ffffff;
   padding: 12px 22px;
   border-radius: 6px;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 600;
   text-decoration: none;
 }
@@ -79,7 +79,7 @@ body {
   color: #ffffff;
   padding: 12px 24px;
   border-radius: 6px;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 600;
   text-decoration: none;
 }
@@ -100,7 +100,7 @@ body {
 
 .trust-heading {
   text-align: center;
-  font-size: 40px;
+  font-size: 18px;
   font-weight: 800;
   margin-bottom: 50px;
 }
@@ -137,14 +137,14 @@ body {
 }
 
 .trust-card h3 {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
   margin-bottom: 10px;
 }
 
 .trust-card p {
   color: #334155;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 /* COLORS */
@@ -176,13 +176,13 @@ body {
 }
 
 .intro-container p {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.8;
   color: #1e293b;
 }
 
 section h1 {
-  font-size: 48px;
+  font-size: 18px;
   font-weight: 800;
   margin-bottom: 16px;
 }
@@ -203,7 +203,7 @@ section p {
 }
 
 .bottom-cta h2 {
-  font-size: 36px;
+  font-size: 18px;
   font-weight: 700;
   margin-bottom: 12px;
 }
@@ -220,7 +220,7 @@ section p {
   color: #cbd5e1;
   padding: 30px 20px;
   text-align: center;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .hero {
@@ -259,19 +259,19 @@ section p {
 }
 
 .hero-content h1 {
-  font-size: 52px;
+  font-size: 40px;
   font-weight: 800;
   margin-bottom: 16px;
 }
 
 .hero-content h2 {
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 700;
   margin-bottom: 12px;
 }
 
 .hero-content h3 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   margin-bottom: 24px;
 }
@@ -310,7 +310,7 @@ section p {
 .trust-container h2,
 .why-choose-container h2,
 .cta-container h2 {
-  font-size: 40px;
+  font-size: 18px;
   font-weight: 800;
   margin-bottom: 20px;
 }
@@ -318,7 +318,7 @@ section p {
 .trust-container p,
 .why-choose-container p,
 .cta-container p {
-  font-size: 20px;
+  font-size: 18px;
   color: #1e293b;
   margin-bottom: 30px;
 }
@@ -339,6 +339,74 @@ section p {
   font-size: 18px;
   font-weight: 600;
   box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.why-choose-section {
+  padding: 90px 20px;
+  background: #ffffff;
+}
+
+.why-choose-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center; /* center heading + intro */
+}
+
+.why-choose-container h2 {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.why-choose-container p {
+  font-size: 18px;
+  color: #1e293b;
+  max-width: 820px;
+  margin-bottom: 60px;
+}
+
+/* GRID */
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px 60px;
+}
+
+/* ITEM */
+.why-item {
+  position: relative;
+  padding-left: 24px;
+}
+
+.why-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 2px;
+  height: 100%;
+  background: #0f766e;
+}
+
+.why-item h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.why-item p {
+  font-size: 18px;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .why-choose-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 }
 
 /* ================= CTA ================= */
@@ -406,16 +474,16 @@ section p {
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 34px;
+    font-size: 18px;
   }
   .hero-content h2 {
-    font-size: 26px;
+    font-size: 18px;
   }
   .hero-content h3 {
-    font-size: 16px;
+    font-size: 18px;
   }
   .hero-content p {
-    font-size: 16px;
+    font-size: 18px;
   }
   .header {
     height: 80px;

@@ -135,15 +135,40 @@ export default function Home() {
           <h2>Why Choose AdlerTech Connect?</h2>
           <p>
             We connect businesses with skilled IT professionals who integrate seamlessly into your
-            teams. Our model ensures faster onboarding, flexible contracts, and guaranteed quality,
-            so your projects stay on track without hiring headaches.
+            teams. Our model ensures faster onboarding, flexible contracts, and guaranteed quality.
           </p>
-          <ul>
-            <li>Expert pre-vetted developers & IT professionals</li>
-            <li>Remote, hybrid, and onsite options</li>
-            <li>Flexible engagement & contract terms</li>
-            <li>End-to-end project support</li>
-          </ul>
+
+          <div className="why-choose-grid">
+            <div className="why-item">
+              <h4>Pre-Vetted Talent</h4>
+              <p>Expert developers and IT professionals rigorously screened for quality.</p>
+            </div>
+
+            <div className="why-item">
+              <h4>Flexible Engagement</h4>
+              <p>Remote, hybrid, or onsite hiring with contract and full-time options.</p>
+            </div>
+
+            <div className="why-item">
+              <h4>Faster Onboarding</h4>
+              <p>Deploy skilled professionals in days, not months.</p>
+            </div>
+
+            <div className="why-item">
+              <h4>Dedicated Support</h4>
+              <p>Account managers ensure smooth communication and delivery.</p>
+            </div>
+
+            <div className="why-item">
+              <h4>Scalable Teams</h4>
+              <p>Easily scale your tech team up or down as project needs change.</p>
+            </div>
+
+            <div className="why-item">
+              <h4>End-to-End Delivery</h4>
+              <p>From hiring to execution, we support you at every stage.</p>
+            </div>
+          </div>
         </div>
       </section>
 
