@@ -2,6 +2,36 @@
   padding-top: 120px; /* offset fixed header */
   background: #f8fafc;
 }
+/* ================= HERO ================= */
+
+.hero {
+  padding: 0 !important;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 0 20px;
+  color: white;
+}
 
 .hero-section {
   max-width: 1200px;
@@ -16,6 +46,12 @@
   margin-bottom: 16px;
 }
 
+.hero-section h2 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
 .hero-subtitle {
   font-size: 20px;
   color: #334155;
@@ -24,9 +60,9 @@
 }
 
 .hero-meta {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
-  color: #0a66c2;
+  color: #fff;
   margin-bottom: 30px;
 }
 
@@ -60,7 +96,7 @@
 }
 
 .staff-augmentation-page section h2 {
-  font-size: 32px;
+  font-size: 18px;
   font-weight: 800;
   text-align: center;
   margin-bottom: 18px;
@@ -74,36 +110,60 @@
   margin: 0 auto 60px;
 }
 
-.snapshot-cards {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px;
-}
+/* ================= SNAPSHOT SECTION ================= */
 
-.snapshot-cards .card {
-  background: #ffffff;
-  padding: 28px;
-  border-radius: 16px;
-  box-shadow: 0 14px 30px rgba(0,0,0,0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.snapshot-cards .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
-}
-
-.snapshot-cards h3 {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.snapshot-cards p {
-  font-size: 16px;
+.section-intro {
+  font-size: 18px;
   color: #475569;
+  margin-bottom: 50px;
+}
+
+/* Cards Container */
+.snapshot-cards,
+.engagement-grid,
+.deployment-grid,
+.use-case-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  justify-content: center;     /* Centers single cards */
+}
+
+/* If only one card → center it */
+.snapshot-cards:has(.card:only-child),
+.engagement-grid:has(.card:only-child),
+.deployment-grid:has(.card:only-child),
+.use-case-grid:has(.card:only-child) {
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+/* Base Card */
+.card {
+  padding: 30px;
+  border-radius: 18px;
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.snapshot-section .card {
+  background: #e8b7ef;
+  border: 2px solid #eb89ed;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.snapshot-section .card:hover {
+  background: #e0edff;
+  border-color: #7da7ff;
 }
 
 .tech-grid {
@@ -214,10 +274,199 @@
 
 .final-cta p {
   font-size: 18px;
+  color: #ffffff;
   margin-bottom: 26px;
 }
 
+.offer-slider {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.offer-track {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+
+.offer-card {
+  min-width: 260px;
+  padding: 35px 25px;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  flex-shrink: 0;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.offer-card:hover {
+  transform: translateY(-8px);
+}
+
+.icon {
+  font-size: 40px;
+  margin-bottom: 18px;
+}
+
+.offer-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Gradient Colors */
+.card1 { background: linear-gradient(135deg, #2563eb, #1e40af); }
+.card2 { background: linear-gradient(135deg, #9333ea, #6b21a8); }
+.card3 { background: linear-gradient(135deg, #0ea5e9, #0369a1); }
+.card4 { background: linear-gradient(135deg, #f97316, #c2410c); }
+.card5 { background: linear-gradient(135deg, #10b981, #047857); }
+.card6 { 
+  background: linear-gradient(135deg, #ec4899, #be185d); 
+}
+
+.card7 { 
+  background: linear-gradient(135deg, #f59e0b, #b45309); 
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 20px;
+  margin-top: 15px;
+}
+
+.icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Continuous Loop */
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Pause on hover */
+.offer-slider:hover .offer-track {
+  animation-play-state: paused;
+}
+
+.benefits-grid {
+  display: grid;
+
+  grid-template-columns: repeat(5, 220px); /* fixed width columns */
+  gap: 30px;
+
+  justify-content: center;   /* centers the entire grid */
+  margin: 40px auto 0 auto;  /* equal left & right space */
+}
+
+
+.benefits-grid:has(.benefit-card:only-child) {
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.benefit-card {
+  width: 220px;
+  height: 220px;
+  background: #eec9b2;
+  border: 2px solid #fbbc95;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.benefit-card:hover {
+  background: #ffe8db;
+  transform: scale(1.05);
+}
+
+.engagement-section .card {
+  background: #bdf3d8;
+  border: 2px solid #6eeaaa;
+  min-height: 180px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;   /* Center text horizontally */
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  width: 100%;
+}
+
+.engagement-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(280px, 380px));
+  gap: 30px;
+
+  justify-content: center;   /* Centers the grid */
+  justify-items: center;     /* Centers cards inside cells */
+
+  max-width: 900px;          /* Controls total width */
+  margin: 0 auto;            /* Makes equal space left & right */
+}
+
+.engagement-section .card:hover {
+  background: #e2f7ee;
+  border-color: #66c89c;
+}
+
+.deployment-section .card {
+  background: #e1ebff;
+  border: 2px solid #c0cef0;
+  min-height: 180px;
+}
+
+.deployment-section .card:hover {
+  border-color: #7c8dfb;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.use-case-section .card {
+  background: #e08f7b;
+  border: 2px solid #f19488;
+  min-height: 20px;
+}
+
+.use-case-section .card:hover {
+  border-color: #7c8dfb;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+@media (max-width: 1024px) {
+  .container { padding: 0 40px; }
+  .header { padding: 0 40px; height: 90px; }
+ 
+}
 @media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .header-right {
+    display: none;     /* hide Hire Talent in header */
+  }
+  .container { padding: 0 20px; }
+
+  .btn-primary {
+    width: 100%;
+    max-width: 320px;          /* prevents too-wide buttons */
+    padding: 14px 20px;       /* better tap area */
+    font-size: 18px;          /* readable on small screens */
+    border-radius: 8px;       /* softer mobile look */
+    text-align: center;
+  }
+
   .hero-section h1 {
     font-size: 28px;
   }
