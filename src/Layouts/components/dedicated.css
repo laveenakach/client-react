@@ -1,0 +1,316 @@
+/* Hero Section */
+.dedicated-hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;       /* vertically center */
+  justify-content: flex-end; /* right side for hero content */
+  text-align: right;
+  background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.1)); /* subtle overlay */
+}
+
+.dedicated-hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.75); /* slightly darken image for text readability */
+  z-index: 1;
+}
+
+.dedicated-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 0 40px;
+  color: #fff; /* white text for better contrast */
+  text-align: right;
+}
+
+.dedicated-hero-content h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.dedicated-hero-content p {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* CTA Buttons */
+.dedicated-hero-cta button {
+  background: linear-gradient(90deg, #4f46e5, #6366f1);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dedicated-hero-cta button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Sections */
+.dedicated-hero-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.dedicated-hero-section h2 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #1f2937; /* dark gray */
+}
+
+.dedicated-hero-section p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #4b5563;
+  max-width: 900px;
+  margin: 0 auto 30px;
+}
+
+/* Benefits List — no bullets */
+.dedicated-benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  list-style: none; /* remove default bullets */
+  padding: 0;
+}
+
+.dedicated-benefits-list li {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  padding: 25px;
+  width: 280px;
+  font-size: 16px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  list-style: none; /* ensure no bullet */
+}
+
+.dedicated-benefits-list li::before {
+  color: #4f46e5;
+  font-weight: bold;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  font-size: 18px;
+}
+
+/* Process Steps — no bullets */
+.dedicated-process-list {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  padding-left: 0; /* remove default padding */
+  list-style: none; /* remove bullets */
+}
+
+.dedicated-process-list li {
+  margin-bottom: 20px;
+  font-size: 18px;
+  position: relative;
+  padding-left: 40px; /* space for step number circle */
+  list-style: none;
+}
+
+.dedicated-process-list li::before {
+  content: counter(step);
+  counter-increment: step;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #4f46e5;
+  color: #fff;
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ol {
+  counter-reset: step;
+  list-style: none; /* remove bullets */
+  padding-left: 0;
+}
+
+
+/* CTA Section */
+.dedicated-hero-section .dedicated-hero-cta {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero-bg {
+  position: relative;
+  background-image: url('../../assets/bottomBanner.webp'); /* your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.75);
+  padding: 100px 20px;
+  width: 100%; /* full width */
+  min-height: 400px; /* adjust as needed */
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4); /* dark overlay for readability */
+  filter: brightness(0.75);
+  z-index: 1;
+  width: 100%; /* full width */
+  min-height: 400px; /* adjust as needed */
+}
+
+.hero-bg h2,
+.hero-bg p,
+.hero-bg .dedicated-hero-cta {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+}
+
+.section-subtitle {
+  margin-bottom: 60px;
+  color: #6b7280;
+  font-size: 18px;
+}
+
+/* Timeline Container */
+.process-timeline {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Vertical line */
+.process-timeline::before {
+  content: "";
+  position: absolute;
+  left: 35px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #e5e7eb;
+}
+
+/* Each Step */
+.process-step {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 60px;
+  position: relative;
+  text-align: center;
+}
+
+/* Step Icon Circle */
+.step-icon {
+  width: 70px;
+  height: 70px;
+  min-width: 70px;
+  background: #ff6b3d;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* Step Content */
+.step-content {
+  margin-left: 40px;
+}
+
+.step-label {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #9ca3af;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.step-content h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.step-content p {
+  font-size: 16px;
+  color: #6b7280;
+  max-width: 600px;
+  line-height: 1.6;
+}
+/* Responsive */
+@media (max-width: 1024px) {
+  .dedicated-hero-content h1 {
+    font-size: 38px;
+  }
+
+  .dedicated-hero-content p {
+    font-size: 20px;
+  }
+
+  .dedicated-benefits-list li {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .dedicated-hero {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .dedicated-hero-content {
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .dedicated-benefits-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .dedicated-benefits-list li {
+    width: 100%;
+  }
+}

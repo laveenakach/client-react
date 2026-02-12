@@ -50,9 +50,9 @@ export default function Header() {
             <div className="services-dropdown">
               <ul>
                 <li><Link to="/StaffAugmentation" onClick={() => setShowServices(false)}>Staff Augmentation</Link></li>
-                <li><Link to="/">Dedicated Teams</Link></li>
-                <li><Link to="/">Contract / Part-Time Resources</Link></li>
-                <li><Link to="/">Remote / Hybrid / Onsite Models</Link></li>
+                <li><Link to="/dedicated" onClick={() => setShowServices(false)}>Dedicated Teams</Link></li>
+                <li><Link to="/" onClick={() => setShowServices(false)}>Contract / Part-Time Resources</Link></li>
+                <li><Link to="/" onClick={() => setShowServices(false)}>Remote / Hybrid / Onsite Models</Link></li>
               </ul>
             </div>
           )}
@@ -110,7 +110,7 @@ export default function Header() {
                     <span><Link to="/StaffAugmentation" onClick={() => setMobileMenuOpen(false)}>
                       Staff Augmentation
                     </Link></span>
-                    <span><Link to="/" onClick={() => setMobileMenuOpen(false)}>Dedicated Teams</Link></span>
+                    <span><Link to="/dedicated" onClick={() => setMobileMenuOpen(false)}>Dedicated Teams</Link></span>
                     <span><Link to="/" onClick={() => setMobileMenuOpen(false)}>Contract / Part-Time Resources</Link></span>
                     <span><Link to="/" onClick={() => setMobileMenuOpen(false)}>Remote / Hybrid / Onsite Models</Link></span>
                   </div>
